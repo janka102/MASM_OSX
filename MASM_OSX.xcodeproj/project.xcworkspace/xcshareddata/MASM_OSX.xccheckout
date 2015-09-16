@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>028971DC-007F-4992-A100-9305B1F000D5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MASM_OSX</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6F5B0CBBE54F608F59225BC84BAC7BFD57D89ECE</key>
+		<string>github.com:janka102/MASM_OSX.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MASM_OSX.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6F5B0CBBE54F608F59225BC84BAC7BFD57D89ECE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:janka102/MASM_OSX.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6F5B0CBBE54F608F59225BC84BAC7BFD57D89ECE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6F5B0CBBE54F608F59225BC84BAC7BFD57D89ECE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MASM_OSX</string>
+		</dict>
+	</array>
+</dict>
+</plist>

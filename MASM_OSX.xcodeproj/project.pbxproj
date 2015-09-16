@@ -188,6 +188,7 @@
 				68D4610C1BA8E897003FC3D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
