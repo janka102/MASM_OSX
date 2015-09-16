@@ -6,12 +6,24 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		68D4610D1BA8E8E2003FC3D8 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; path = Makefile; sourceTree = "<group>"; };
+		68D4610E1BA8E936003FC3D8 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		68D4610F1BA8E9B4003FC3D8 /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
+		68D461101BA8EC8C003FC3D8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		68D461021BA8E897003FC3D8 = {
 			isa = PBXGroup;
 			children = (
+				68D461101BA8EC8C003FC3D8 /* README.md */,
+				68D4610F1BA8E9B4003FC3D8 /* bin */,
+				68D4610E1BA8E936003FC3D8 /* lib */,
+				68D4610D1BA8E8E2003FC3D8 /* Makefile */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 /* End PBXGroup section */
 
