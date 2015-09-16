@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-O0 -g -arch i386
+CFLAGS=-Wall -g -arch i386
 
 LDIR=lib
 BDIR=bin
@@ -16,14 +16,11 @@ bins: $(BINS)
 $(BDIR)/%: $(TMP)/%.macho
 	$(CC) $< -o $@ $(CFLAGS)
 
-$(TMP)/%.macho: $(TMP)/%.obj
-	$(LDIR)/objconv -nr:__main@0:_main $< $@
-
-$(TMP)/%.obj: $(TMP)/%.o
+$(TMP)/%.macho: $(TMP)/%.o
 	$(LDIR)/objconv -fmac32 -nu+ $< $@
 
 $(TMP)/%.o: $(TMP)/%.asm
-	cd $(TMP); ../$(LDIR)/jwasm -nologo -elf $(notdir $<)
+	$(LDIR)/jwasm -nologo -zt0 -elf -Fo $@ $<
 
 $(TMP)/%.asm: %.asm
 	cp $< $@; perl -pi -e 's/invoke ExitProcess, ?0/ret/i' $@
