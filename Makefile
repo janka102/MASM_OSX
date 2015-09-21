@@ -1,37 +1,31 @@
 CC=clang
-CFLAGS=-Wall -g -arch i386
+CFLAGS=-Wall -g -arch i386 -lAlong32 -Llib -Wl,-no_pie
 
 LDIR=lib
 BDIR=bin
-TMP=tmp
 
 SRCS=$(wildcard *.asm)
 BINS=$(addprefix $(BDIR)/,$(SRCS:.asm=))
 
-all: $(BDIR) $(TMP) bins
-	rm -Rf $(TMP)
+all: $(BDIR) $(BINS)
 
-bins: $(BINS)
-
-$(BDIR)/%: $(TMP)/%.macho
+$(BDIR)/%: $(BDIR)/%.macho
 	$(CC) $< -o $@ $(CFLAGS)
 
-$(TMP)/%.macho: $(TMP)/%.o
-	$(LDIR)/objconv -fmac32 -nu+ $< $@
+$(BDIR)/%.macho: $(BDIR)/%.o
+	$(LDIR)/objconv -fmac32 -nu $< $@
 
-$(TMP)/%.o: $(TMP)/%.asm
+$(BDIR)/%.o: $(BDIR)/%.asm
 	$(LDIR)/jwasm -nologo -zt0 -elf -Fo $@ $<
 
-$(TMP)/%.asm: %.asm
-	cp $< $@; perl -pi -e 's/invoke ExitProcess, ?0/ret/i' $@
+$(BDIR)/%.asm: %.asm
+	cp $< $@
+	perl -pi -e 's,Include Irvine32.inc,Include lib/Along32.inc,i' $@
 
 $(BDIR):
 	mkdir -p $(BDIR)
 
-$(TMP):
-	mkdir -p $(TMP)
-
 clean:
 	rm -Rf $(BDIR)
 
-.PHONY: all clean bins
+.PHONY: all clean
