@@ -92,6 +92,13 @@ WriteHex PROTO
 WriteHexB PROTO
 WriteInt PROTO
 WriteString PROTO
+
 ; ------------------------------------------
+; MACROS
+; ------------------------------------------
+EXIT macro code
+  mov eax,0
+  ret
+endm
 
 .LIST
