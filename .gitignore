@@ -1,5 +1,6 @@
 .DS_Store
+MASM_OSX.xcodeproj/xcuserdata/
 
 bin/
 *.asm
-
+*.err

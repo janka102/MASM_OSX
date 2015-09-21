@@ -11,6 +11,8 @@
             continueAfterRunningActions = "No"
             symbolName = "main"
             moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
