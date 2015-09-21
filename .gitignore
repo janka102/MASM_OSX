@@ -3,4 +3,5 @@ MASM_OSX.xcodeproj/xcuserdata/
 
 bin/
 *.asm
+!template.asm
 *.err
