@@ -5,7 +5,7 @@
 ; Homepage: http://along32.sourceforge.net
 ;
 ; Along32 library is free software: you can redistribute it and/or modify
-; it under the terms of the GNU Lesser General Public License as 
+; it under the terms of the GNU Lesser General Public License as
 ; published by the Free Software Foundation, either version 3 of the
 ; License, or(at your option) any later version.
 ;
@@ -25,7 +25,7 @@
 .stack 4096
 
 ; ------------------------------------------
-; function descriptions 
+; function descriptions
 ; ------------------------------------------
 ; Clrscr : Writes a carriage return / linefeed
 ; Crlf : output a new line
@@ -34,7 +34,7 @@
 ; IsDigit : Determines whether the character in AL is a valid decimal digit.
 ; DumpMem : Writes a range of memory to standard output in hexadecimal.
 ; ParseDecimal32: convert the number string to a decimal number
-; ParseInteger32 : Converts a string containing a signed decimal integer to binary. 
+; ParseInteger32 : Converts a string containing a signed decimal integer to binary.
 ; Str_length : compute the length of null-teminated string
 ; Str_compare : Compare two strings.
 ; Str_trim : Remove all occurences of a given character from the end of a string.
@@ -97,8 +97,11 @@ WriteString PROTO
 ; MACROS
 ; ------------------------------------------
 EXIT macro code
-  mov eax,0
-  ret
+  mov ebx, 0 ; Return code
+  push ebx
+  mov eax, 1
+  push eax
+  int 80h
 endm
 
 .LIST
