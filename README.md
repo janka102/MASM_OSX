@@ -1,6 +1,6 @@
 # MASM on OS X
 
-Use Xcode to edit, compile, and debug MASM assembly files. Tested and working in Xcode 6 and 7.
+Use Xcode to edit, compile, and debug MASM assembly files. Tested and working in Xcode [5, 6, and 7](https://github.com/janka102/MASM_OSX/issues/1).
 
 Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](https://github.com/vertis/objconv). This also includes support for the Irvine library as provide by [Along32](http://sourceforge.net/projects/along32).
 
