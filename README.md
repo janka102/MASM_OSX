@@ -8,22 +8,23 @@ Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](ht
 
 ## Instructions
 
-- Create new file
+1. Open `MASM_OSX.xcodeproj` in Xcode
+2. Create new file
     - File > New > File... ⌘N
     - OS X > Other > Empty
     - Name the file *.asm
-- Write some masm code
-    - There is a provided template that has the Irvine library included.
-- Build it
+3. Write some MASM code
+    - There is a provided template that has the Irvine library `Include`d.
+4. Build it
     - Product > Build ⌘B
-- Change which file to run/debug
+5. Change which file to run/debug
     - Product > Scheme > Edit Scheme... ⌘<
     - Select "Run" on the left side
     - On the right, select the "Info" section
     - Click the "Executable" dropdown and select "Other..."
         - Navigate to the project folder
         - The executables are located under the "bin" folder
-- Run/Debug it
+6. Run/Debug it
     - Change to 32-bit mode
         - In the title bar, next to "MASM_OSX", click "My Mac (64-bit)"
         - Change it to "My Mac (32-bit)"
