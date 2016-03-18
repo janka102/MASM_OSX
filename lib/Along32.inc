@@ -49,6 +49,7 @@
 ; ReadInt : Reads a 32-bit signed decimal integer from standard input
 ; ReadString : read string from input buffer
 ; ReadChar : read a character from stdin
+; SetTextColor : set console text color
 ; WriteBin : write a 32-bit binary number to console( interface )
 ; WriteBinB : write a 32-bit binary number to console
 ; WriteChar : write a character to stdout
@@ -79,6 +80,7 @@ ReadHex PROTO
 ReadInt PROTO
 ReadKey PROTO
 ReadString PROTO
+SetTextColor PROTO
 Str_compare PROTO
 Str_copy PROTO
 Str_length PROTO
@@ -93,15 +95,32 @@ WriteHexB PROTO
 WriteInt PROTO
 WriteString PROTO
 
+;-----------------------------------
+; Standard 4-bit color definitions
+;-----------------------------------
+black        = 0000b
+blue         = 0001b
+green        = 0010b
+cyan         = 0011b
+red          = 0100b
+magenta      = 0101b
+brown        = 0110b
+lightGray    = 0111b
+gray         = 1000b
+lightBlue    = 1001b
+lightGreen   = 1010b
+lightCyan    = 1011b
+lightRed     = 1100b
+lightMagenta = 1101b
+yellow       = 1110b
+white        = 1111b
+
 ; ------------------------------------------
 ; MACROS
 ; ------------------------------------------
 EXIT macro code
-  mov ebx, 0 ; Return code
-  push ebx
-  mov eax, 1
-  push eax
-  int 80h
+	mov eax, 0
+	ret
 endm
 
 .LIST
