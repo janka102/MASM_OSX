@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MASM Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "externalConsole": true,
+      "osx": {
+        "MIMode": "lldb"
+      }
+    }
+  ]
+}
