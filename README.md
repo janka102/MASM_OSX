@@ -1,12 +1,14 @@
 # MASM on OS X
 
-Use Xcode to edit, compile, and debug MASM assembly files. Tested and working in Xcode [5, 6, and 7](https://github.com/janka102/MASM_OSX/issues/1).
+Use Xcode or Visual Studio Code to edit, compile, and debug MASM assembly files. Tested and working in Xcode versions [5, 6, and 7](https://github.com/janka102/MASM_OSX/issues/1).
 
 Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](https://github.com/vertis/objconv). This also includes support for the Irvine library as provide by [Along32](http://sourceforge.net/projects/along32).
 
 *NOTE: This is not guaranteed to work 100% with MASM and/or the Irvine library. Just because your program works in Xcode does not guarantee it will work in Visual Studio, and visa versa. Always test in Visual Studio before submitting final work. Saying that, if you have any problems, please open an issue here on GitHub.*
 
 ## Instructions
+
+### Xcode
 
 1. Open `MASM_OSX.xcodeproj` in Xcode
 2. Create new file
@@ -31,6 +33,25 @@ Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](ht
     - Product > Run ⌘R
     - There is a default breakpoint on the "main" procedure
         - The debugger will open automatically
+
+### Visual Studio Code
+
+1. Open this folder in VS Code
+2. Create new file
+    - File > New File ⌘N
+    - Save and name the file *.asm
+3. Write some MASM code
+    - There is a provided template that has the Irvine library `Include`d.
+4. Build current file (⇧⌘B)
+    - Make sure the file is the active tab
+    - View > Command Palette... ⇧⌘P
+        - Search for "build"
+        - Tasks: Run Build Task ⇧⌘B
+6. Run/Debug current file (F5)
+    - View > Debug Console ⇧⌘Y
+        - Type `-exec help` to learn more about how to use the console debugger
+        - `-exec di` to see the current function's instructions
+    - There is a default breakpoint on the "main" procedure
 
 ## Known Issues
 
