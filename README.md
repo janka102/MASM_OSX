@@ -6,7 +6,7 @@ Tested and working in Xcode versions [5, 6, and 7](https://github.com/janka102/M
 
 Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](https://github.com/vertis/objconv). This also includes support for the Irvine library as provide by [Along32](http://sourceforge.net/projects/along32).
 
-*NOTE: This is not guaranteed to work 100% with MASM and/or the Irvine library. Just because your program works in Xcode does not guarantee it will work in Visual Studio, and visa versa. Always test in Visual Studio before submitting final work. Saying that, if you have any problems, please open an issue here on GitHub.*
+*NOTE: This is not guaranteed to work 100% with MASM and/or the Irvine library. Just because your program works in Xcode does not guarantee it will work in Visual Studio, and vice versa. Always test in Visual Studio before submitting final work. Saying that, if you have any problems, please open an issue here on GitHub.*
 
 ## Instructions
 
