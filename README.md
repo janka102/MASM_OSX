@@ -1,6 +1,8 @@
 # MASM on OS X
 
-Use Xcode or Visual Studio Code to edit, compile, and debug MASM assembly files. Tested and working in Xcode versions [5, 6, and 7](https://github.com/janka102/MASM_OSX/issues/1).
+Use Xcode or Visual Studio Code to edit, compile, and debug MASM assembly files.
+
+Tested and working in Xcode versions [5, 6, and 7](https://github.com/janka102/MASM_OSX/issues/1). Version 9 works with a [small fix for using breakpoints](https://github.com/janka102/MASM_OSX/issues/4).
 
 Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](https://github.com/vertis/objconv). This also includes support for the Irvine library as provide by [Along32](http://sourceforge.net/projects/along32).
 
@@ -55,12 +57,12 @@ Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](ht
 
 ## Known Issues
 
-* Can't have the first value in `.data` be uninitialized. Thank you [@shankwiler](https://github.com/shankwiler) for finding this.  
+- Can't have the first value in `.data` be uninitialized. Thank you [@shankwiler](https://github.com/shankwiler) for finding this.  
     You will get an error like `bin/template.asm : Error A2168: General Failure`. This is an issue with JWasm and outputting to the ELF format. The easiest workaround would be to add other data before the first uninitialized value. If you don't have any other data to put before, you have to make up dummy data like `_ byte 0`. Here's a minimal example:
     ```asm
     Include Irvine32.inc
     .data
-    val byte ? ; Needs to be preceeded by by some initialized value, ex. _ byte 0
+    val byte ? ; Needs to be preceeded by some initialized value, ex. _ byte 0
 
     .code
     main proc
@@ -68,4 +70,4 @@ Made possible thanks to [JWasm](https://github.com/JWasm/JWasm) and [objconv](ht
     main endp
     end main
     ```
-    
+- In Xcode version 9 the default `main` breakpoint may not work. Check out [issue #4](https://github.com/janka102/MASM_OSX/issues/4) for a resolution.
